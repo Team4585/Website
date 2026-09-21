@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://husky-robotics.netlify.app/sitemap.xml
