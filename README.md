@@ -18,6 +18,9 @@ To preview locally, run `python3 -m http.server 8080` from the repository root a
 - The homepage and support page both show the sponsor wall. Update both when changing sponsors.
 - Fabworks and Mad Spark Coatings were added by the team. The Dalton Family and JEB remain text entries without unverified website links.
 - Keep historical outreach totals labeled by year. Check event dates against official FIRST listings.
+- Keep the same six navigation links and the “Support / Join” label on every page; only the active-page marker changes.
+- Record 2020–2021 as pandemic-era history, separately from the normal robot grid. Corellius competed at Utah in March 2020 before later events were cancelled; 2021 used remote challenges and judging. The 2021 Chairman’s Award remains part of the team’s history. See the official [2020](https://frc-events.firstinspires.org/2020/team/4585) and [2021](https://frc-events.firstinspires.org/2021/team/4585) records.
+- Use verified robot photographs for robot records. If no photo is available, use a year label instead of a photograph from another season or a team celebration.
 
 ## Sponsor artwork
 
