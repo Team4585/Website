@@ -160,9 +160,8 @@ p { max-width: 67ch; }
 .join-band { border-top: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule); background: var(--color-paper-2); }
 .join-band__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-2xl); align-items: center; }
 .support-preview { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-2xl); align-items: start; }
-.sponsor-wall { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
-.sponsor-wall .footer-label { flex-basis: 100%; }
-.sponsor-wall span { padding: var(--space-xs) var(--space-sm); border: 1px solid var(--color-rule); background: var(--color-white); font-weight: 600; }
+.sponsor-wall { min-width: 0; }
+.sponsor-wall .footer-label { color: var(--color-accent); }
 
 .page-hero { padding-block: clamp(4rem, 9vw, 8rem); border-bottom: 1px solid var(--color-rule); }
 .page-hero > h1, .page-hero > div > h1 { max-width: 11ch; }
@@ -248,8 +247,17 @@ p { max-width: 67ch; }
 .tier ul { margin: 0; padding-left: 1.2rem; }
 .contact-panel { display: flex; justify-content: space-between; gap: var(--space-lg); align-items: center; margin-top: var(--space-xl); padding: var(--space-lg); color: var(--color-white); background: var(--color-accent-dark); }
 .contact-panel h3 { max-width: 20ch; margin-bottom: 0; }
-.sponsor-grid { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--color-rule); border-left: 1px solid var(--color-rule); }
-.sponsor-grid div { display: grid; min-height: 8rem; place-items: center; padding: var(--space-md); border-right: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule); text-align: center; font-weight: 600; }
+.sponsor-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--color-rule); border-left: 1px solid var(--color-rule); }
+.sponsor-card { display: grid; min-width: 0; min-height: 10rem; place-items: center; padding: var(--space-md); border-right: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule); color: var(--color-ink); background: var(--color-white); text-align: center; text-decoration: none; }
+.sponsor-card img { width: auto; max-width: 100%; max-height: 6.5rem; object-fit: contain; }
+.sponsor-card--dark { background: #151923; }
+.sponsor-card--text span { font-family: var(--font-display); font-size: 1.65rem; font-weight: 800; line-height: 1; text-transform: uppercase; }
+a.sponsor-card:hover, a.sponsor-card:focus-visible { position: relative; z-index: 1; background: var(--color-paper-2); box-shadow: inset 0 -4px 0 var(--color-accent); }
+a.sponsor-card--dark:hover, a.sponsor-card--dark:focus-visible { background: #202635; }
+.sponsor-grid--compact { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.sponsor-grid--compact .sponsor-card { min-height: 6.5rem; padding: var(--space-sm); }
+.sponsor-grid--compact .sponsor-card img { max-height: 3.75rem; }
+.sponsor-grid--compact .sponsor-card--text span { font-size: 1.2rem; }
 
 .detail-page { padding-bottom: var(--space-3xl); }
 .detail-hero { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(19rem, 0.8fr); gap: clamp(2rem, 7vw, 6rem); align-items: center; padding-block: clamp(3rem, 8vw, 7rem); border-bottom: 1px solid var(--color-rule); }
@@ -284,7 +292,7 @@ p { max-width: 67ch; }
   .program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .program-card--wide { grid-column: auto; display: block; }
   .program-card--wide img { height: 17rem; min-height: 0; }
-  .sponsor-grid { grid-template-columns: repeat(3, 1fr); }
+  .sponsor-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 53.75rem) {
@@ -341,8 +349,9 @@ p { max-width: 67ch; }
   .tier summary span:last-child { grid-column: 2; grid-row: 1 / span 2; }
   .tier > div { padding-left: 0; }
   .contact-panel { align-items: flex-start; flex-direction: column; }
-  .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
-  .sponsor-grid div { min-height: 6rem; padding: var(--space-sm); font-size: var(--text-sm); }
+  .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sponsor-card { min-height: 7rem; padding: var(--space-sm); }
+  .sponsor-card--text span { font-size: 1.2rem; }
   .detail-hero__media { margin-inline: -0.75rem; }
   .detail-hero__media figcaption { padding-inline: 0.75rem; }
   .spec-grid { grid-template-columns: 1fr; }
